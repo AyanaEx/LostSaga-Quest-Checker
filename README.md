@@ -14,6 +14,6 @@ ALLOWED_USERS=YOUR_DISCORD_ID
 ```
 ### Simple Run
 - Open CMD
-- And install require
-- NPM i dotenv, discord.js
+- Install require
+- NPM i dotenv, discord.js, mssql
 - Node losa.js
