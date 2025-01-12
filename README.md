@@ -1,4 +1,4 @@
-Quest Checker for bot discord, Use nodejs (Underline)
+Quest Checker for bot discord, Use nodejs
 =============
 
 #### First you add .env files
