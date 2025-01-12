@@ -4,13 +4,15 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 const sql = require('mssql');
 
 const dbConfig = {
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    server: process.env.DB_SERVER,
-    port: parseInt(process.env.DB_PORT, 10),
-    database: process.env.DB_NAME,
+    user: process.env.SQL_USER,
+    password: process.env.SQL_PASSWORD,
+    server: process.env.SQL_SERVER.split(':')[0],
+    port: parseInt(process.env.SQL_SERVER.split(':')[1], 10), // Convert port ke tipe number
+    database: process.env.SQL_DATABASE,
     options: {
         encrypt: false,
+        enableArithAbort: true,
+        requestTimeout: 30000, // Timeout 30 sec
     },
 };
 
